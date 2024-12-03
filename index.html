@@ -122,66 +122,92 @@
   </style>
    
   
-
-<section 
-  class="w-full max-w-[90%] sm:max-w-[1024px] md:max-w-[1226px] h-[300px] sm:h-[400px] md:h-[441px] relative mx-auto mt-[60px] rounded-xl transition-all duration-1000" 
-  id="carouselSection"
-  style="background-image: url('./image/1.png'); background-size: cover; background-position: center;">
+   <section 
+   class="w-full max-w-[90%] sm:max-w-[1024px] md:max-w-[1226px] h-[300px] sm:h-[400px] md:h-[441px] relative mx-auto mt-[60px] rounded-xl transition-all duration-1000" 
+   id="carouselSection"
+   style="background-image: url('./image/1.png'); background-size: cover; background-position: center;">
+   
+   <!-- Overlay -->
+   <div class="absolute inset-0 bg-black/40 rounded-xl"></div>
+   
+   <!-- Pagination/Navigation dots -->
+   <div id="pagination" class="absolute left-1/2 bottom-[10px] sm:bottom-[20px] transform -translate-x-1/2 flex gap-2 sm:gap-3.5 items-center">
+     <div class="w-3 h-3 sm:w-4 sm:h-4 bg-[#c2282d] rounded-full"></div>
+     <div class="w-3 h-3 sm:w-4 sm:h-4 bg-[#d9d9d9] rounded-full"></div>
+     <div class="w-3 h-3 sm:w-4 sm:h-4 bg-[#d9d9d9] rounded-full"></div>
+   </div>
+ 
+   <!-- Heading -->
+   <h1 class="absolute left-1/2 top-[25%] sm:top-[30%] md:top-[30%] transform -translate-x-1/2 text-center text-white text-[24px] sm:text-[32px] md:text-[48px] font-regular font-['DM Serif Display'] leading-[30px] sm:leading-[40px] md:leading-[60px] px-4" 
+   style="text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);">
+     Brighten Your World with <br />Innovative LED Lighting
+   </h1>
+ 
+   <!-- Navigation Buttons -->
+   <button id="prevBtn" class="absolute left-2 top-1/2 transform -translate-y-1/2 bg-white/30 hover:bg-white/50 p-3 rounded-full">
+    <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+      <path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7" />
+    </svg>
+  </button>
   
-  <!-- Overlay -->
-  <div class="absolute inset-0 bg-black/40 rounded-xl"></div>
+  <button id="nextBtn" class="absolute right-2 top-1/2 transform -translate-y-1/2 bg-white/30 hover:bg-white/50 p-3 rounded-full">
+    <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+      <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
+    </svg>
+  </button>
   
-  <!-- Pagination/Navigation dots -->
-  <div id="pagination" class="absolute left-1/2 bottom-[10px] sm:bottom-[20px] transform -translate-x-1/2 flex gap-2 sm:gap-3.5 items-center">
-    <div class="w-3 h-3 sm:w-4 sm:h-4 bg-[#c2282d] rounded-full"></div>
-    <div class="w-3 h-3 sm:w-4 sm:h-4 bg-[#d9d9d9] rounded-full"></div>
-    <div class="w-3 h-3 sm:w-4 sm:h-4 bg-[#d9d9d9] rounded-full"></div>
-  </div>
-
-  <!-- Heading -->
-  <h1 class="absolute left-1/2 top-[25%] sm:top-[30%] md:top-[30%] transform -translate-x-1/2 text-center text-white text-[24px] sm:text-[32px] md:text-[48px] font-regular font-['DM Serif Display'] leading-[30px] sm:leading-[40px] md:leading-[60px] px-4" 
-  style="text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);">
-    Brighten Your World with <br />Innovative LED Lighting
-  </h1>
-
-</section>
-
-<script>
-  const images = [
-    './image/1.png',
-    './image/2.png',
-    './image/3.png'
-  ];
-
-  let currentIndex = 0;
-  const carouselSection = document.getElementById('carouselSection');
-  const pagination = document.getElementById('pagination').children;
-
-  function changeImage() {
-    // Update background image
-    carouselSection.style.backgroundImage = `url(${images[currentIndex]})`;
-
-    // Update pagination dots
-    for (let i = 0; i < pagination.length; i++) {
-      if (i === currentIndex) {
-        pagination[i].classList.add('bg-[#c2282d]');
-        pagination[i].classList.remove('bg-[#d9d9d9]');
-      } else {
-        pagination[i].classList.remove('bg-[#c2282d]');
-        pagination[i].classList.add('bg-[#d9d9d9]');
-      }
-    }
-
-    // Update index for next cycle
-    currentIndex = (currentIndex + 1) % images.length;
-  }
-
-  // Change image every 3 seconds
-  setInterval(changeImage, 3000);
-
-  // Initial image load
-  changeImage();
-</script>
+ </section>
+ 
+ <script>
+   const images = [
+     './image/1.png',
+     './image/2.png',
+     './image/3.png'
+   ];
+ 
+   let currentIndex = 0;
+   const carouselSection = document.getElementById('carouselSection');
+   const pagination = document.getElementById('pagination').children;
+   const prevBtn = document.getElementById('prevBtn');
+   const nextBtn = document.getElementById('nextBtn');
+ 
+   function updateCarousel() {
+     // Update background image
+     carouselSection.style.backgroundImage = `url(${images[currentIndex]})`;
+ 
+     // Update pagination dots
+     for (let i = 0; i < pagination.length; i++) {
+       if (i === currentIndex) {
+         pagination[i].classList.add('bg-[#c2282d]');
+         pagination[i].classList.remove('bg-[#d9d9d9]');
+       } else {
+         pagination[i].classList.remove('bg-[#c2282d]');
+         pagination[i].classList.add('bg-[#d9d9d9]');
+       }
+     }
+   }
+ 
+   function nextSlide() {
+     currentIndex = (currentIndex + 1) % images.length;
+     updateCarousel();
+   }
+ 
+   function prevSlide() {
+     currentIndex = (currentIndex - 1 + images.length) % images.length;
+     updateCarousel();
+   }
+ 
+   // Attach event listeners to buttons
+   prevBtn.addEventListener('click', prevSlide);
+   nextBtn.addEventListener('click', nextSlide);
+ 
+   // Change image every 3 seconds
+   setInterval(nextSlide, 3000);
+ 
+   // Initial image load
+   updateCarousel();
+ </script>
+ 
 
 <section class="w-full max-w-[1227px] mx-auto mt-[51px] px-4">
   <div class="flex flex-col items-center gap-4">
