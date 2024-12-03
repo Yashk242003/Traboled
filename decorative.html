@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Decorative Lights</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet"/>
+
+  <style>
+    body {
+      font-family: 'Roboto', sans-serif;
+    }
+    h1, h3 {
+      font-family: 'DM Serif Display', serif;
+    }
+  </style>
+</head>
+<body style="background-color: #F7F7F7;">
+  <!-- Header -->
+  <header class="bg-white shadow-md">
+    <div class="w-full h-[89px] px-4 py-4 bg-white shadow flex justify-between items-center">
+      <img class="w-[120px] h-[60px] ml-4 sm:ml-10" src="./image/Logo.png" alt="Logo">
+      <div class="lg:hidden flex items-center cursor-pointer" id="hamburger-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="w-6 h-6">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+        </svg>
+      </div>
+      <div class="hidden lg:flex items-center gap-6 mr-4 sm:mr-10">
+        <a href="index.html" class="text-[#545454] text-sm sm:text-base font-medium hover:text-[#c2282d] hover:underline-animation">Home</a>
+        <a href="about.html" class="text-[#545454] text-sm sm:text-base font-medium hover:text-[#c2282d] hover:underline-animation">About Us</a>
+        <a href="indoor.html" class="text-[#545454] text-sm sm:text-base font-medium hover:text-[#c2282d] hover:underline-animation">Indoor Lights</a>
+        <a href="outdoor.html" class="text-[#545454] text-sm sm:text-base font-medium hover:text-[#c2282d] hover:underline-animation">Outdoor Lights</a>
+        <a href="decorative.html" class="text-[#545454] text-sm sm:text-base font-medium hover:text-[#c2282d] hover:underline-animation">Decorative Lights</a>
+        <a href="partner.html" class="bg-[#c2282d] text-white py-2 px-4 sm:py-2 sm:px-6 rounded hover:bg-[#a31d26]">Become Partner</a>
+      </div>
+    </div>
+  
+    <!-- Sidebar -->
+    <div class="fixed top-0 right-0 w-64 h-full bg-white shadow-lg transform translate-x-full transition-transform duration-300 z-50" id="sidebar">
+      <div class="flex justify-end p-4">
+        <button class="text-2xl" id="close-sidebar">×</button>
+      </div>
+      <nav class="flex flex-col items-center gap-6 p-4">
+        <a href="index.html" class="text-[#545454] text-sm sm:text-base font-medium">Home</a>
+        <a href="about.html" class="text-[#545454] text-sm sm:text-base font-medium">About Us</a>
+        <a href="indoor.html" class="text-[#545454] text-sm sm:text-base font-medium">Indoor Lights</a>
+        <a href="outdoor.html" class="text-[#545454] text-sm sm:text-base font-medium">Outdoor Lights</a>
+        <a href="decorative.html" class="text-[#545454] text-sm sm:text-base font-medium">Decorative Lights</a>
+        <a href="partner.html" class="bg-[#c2282d] text-white py-2 px-4 sm:py-2 sm:px-6 rounded hover:bg-[#a31d26]">Become Partner</a>
+      </nav>
+    </div>
+    <div class="fixed inset-0 bg-gray-500 bg-opacity-50 z-40 hidden" id="overlay"></div>
+  
+    <script>
+      const hamburgerIcon = document.getElementById('hamburger-icon');
+      const sidebar = document.getElementById('sidebar');
+      const closeSidebar = document.getElementById('close-sidebar');
+      const overlay = document.getElementById('overlay');
+      const body = document.body;
+  
+      // Show sidebar and disable scrolling
+      hamburgerIcon.addEventListener('click', () => {
+        sidebar.style.transform = 'translateX(0)';
+        overlay.classList.remove('hidden');
+        body.classList.add('overflow-hidden'); // Prevent scrolling
+      });
+  
+      // Hide sidebar and enable scrolling
+      closeSidebar.addEventListener('click', () => {
+        sidebar.style.transform = 'translateX(100%)';
+        overlay.classList.add('hidden');
+        body.classList.remove('overflow-hidden'); // Restore scrolling
+      });
+  
+      overlay.addEventListener('click', () => {
+        sidebar.style.transform = 'translateX(100%)';
+        overlay.classList.add('hidden');
+        body.classList.remove('overflow-hidden'); // Restore scrolling
+      });
+    </script>
+  </header>
+  <!-- Add this CSS for hover underline animation -->
+  <style>
+    /* Prevent scrolling when overflow-hidden is added to body */
+    body.overflow-hidden {
+      overflow: hidden;
+    }
+  
+    /* Underline effect on hover for desktop links */
+    .hover\:underline-animation {
+      position: relative;
+      display: inline-block;
+    }
+  
+    .hover\:underline-animation::after {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 2px;
+      bottom: 0;
+      left: 0;
+      background-color: #c2282d;
+      transform: scaleX(0);
+      transform-origin: bottom right;
+      transition: transform 0.3s ease-out;
+    }
+  
+    .hover\:underline-animation:hover::after {
+      transform: scaleX(1);
+      transform-origin: bottom left;
+    }
+  
+    /* Disable underline effect on sidebar links */
+    #sidebar .hover\:underline-animation::after,
+    #sidebar .hover\:underline-animation:hover::after {
+      content: none;
+      transition: none;
+    }
+  </style>
+  
+  
+  
+  <section class="w-full relative px-4 sm:px-20 mt-16 sm:mt-20">
+
+    <div class="flex flex-wrap sm:flex-nowrap items-start justify-between">
+
+         <!-- Image Section -->
+         <section class="relative w-full sm:w-[418.24px] sm:h-[474px] md:w-[418px] bg-[#fefefe] rounded-lg shadow mb-8 sm:mb-0 ml-[0px] sm:ml-[150px] sm:w-[50%]">
+            <!-- Image Section -->
+            <div class="relative">
+              <!-- Main Image -->
+              <img
+              class="w-full h-auto sm:h-[300px] h-[280px] md:h-[160px] md:w-[418px] object-cover rounded-t-lg mt-[20px] sm:mt-[30px] md:mt-[160px]"
+              src="./image/Rimlesss.png"
+              alt="Rimless Downlight"
+            />
+            
+              <!-- Thumbnail Images Section -->
+              <div class="flex flex-wrap justify-center gap-4 sm:gap-[120px] md:gap-[2px] mt-2 sm:mt-36 md:mt-[200px]">
+                <img
+                  class="w-[90px] h-[90px] sm:w-[122px] sm:h-[122px] md:h-[100px] md:w-[100px] rounded shadow-sm"
+                  src="./image/L1.png"
+                  alt="Image 1"
+                />
+                <img
+                  class="w-[90px] h-[90px] sm:w-[122px] sm:h-[122px] md:h-[100px] md:w-[100px] rounded shadow-sm"
+                  src="./image/L2.png"
+                  alt="Image 2"
+                />
+                <img
+                  class="w-[90px] h-[90px] sm:w-[122px] sm:h-[122px] md:h-[100px] md:w-[100px] rounded shadow-sm"
+                  src="./image/L3.png"
+                  alt="Image 3"
+                />
+              </div>
+            </div>
+          </section>
+        <!-- Text Content Section -->
+        <section class="relative sm:ml-[110px] mt-0 sm:mt-0 top-0 sm:w-[50%]">
+          <!-- Decorative Lighting Title -->
+          <div class="text-center sm:text-left mb-4">
+            <h1 class="text-[#545454] text-2xl sm:text-[38px] font-normal font-['DM Serif Display'] leading-tight">
+              Decorative Lighting
+            </h1>
+            <div class="flex items-center mt-[38px]">
+              <!-- Left Line -->
+              <div class="h-[105px] w-[6px] bg-[#c2282d] mr-4"></div>
+            
+              <!-- Text Content -->
+              <div>
+                <div class="text-[#c2282d] text-xl sm:text-4xl font-bold text-left">RIMLESS</div>
+                <div class="text-[#545454] text-lg sm:text-[23.17px] mt-1">DOWNLIGHT</div>
+              </div>
+            </div>
+          </div>
+        
+          <!-- Description Section -->
+          <p class="text-[#545454] text-sm sm:text-base mt-[27px] leading-relaxed w-[310px] sm:w-[589px] md:w-[350px]">
+            LED lighting has revolutionized the way we design and brighten our spaces. Combining energy efficiency with
+            creative aesthetics, these lights are not just functional but also serve as a powerful design element to elevate
+            the ambiance of any environment.
+          </p>
+        
+          <!-- Color and Category Section -->
+          <div class="text-sm sm:text-base text-[#545454] space-y-2 mb-6">
+            <p>
+              <span class="font-bold">Color:</span> Black & White
+            </p>
+            <p>
+              <span class="font-bold">Category:</span> Modern Design
+            </p>
+          </div>
+        </section>
+      
+       
+      </div>
+      
+      
+      <!-- Text Content Section -->
+     
+  
+  
+  </section>
+  
+
+  <!-- Footer -->
+  <footer class="background-color: #F7F7F7; py-8 mt-[51px] sm:mt-[513px]">
+    <div class="container mx-auto px-4 sm:px-6">
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div>
+          <img alt="Trabo LED Lights Logo" class="h-[50px] w-auto" src="./image/Logo.png" />
+          <p class="mt-4 text-gray-600 text-sm sm:text-base">
+            It is a long established fact that a reader will be distracted looking.
+          </p>
+          <div class="flex space-x-4 mt-4">
+            <a class="text-red-600 hover:text-red-600" href="#"><i class="fab fa-facebook-f"></i></a>
+            <a class="text-red-600 hover:text-red-600" href="#"><i class="fab fa-twitter"></i></a>
+            <a class="text-red-600 hover:text-red-600" href="#"><i class="fab fa-instagram"></i></a>
+            <a class="text-red-600 hover:text-red-600" href="#"><i class="fab fa-linkedin-in"></i></a>
+          </div>
+        </div>
+        <div>
+          <h3 class="text-lg sm:text-xl">Pages</h3>
+          <ul class="mt-2 space-y-2">
+            <li><a class="text-gray-600 hover:text-red-600 text-sm sm:text-base" href="index.html">Home</a></li>
+            <li><a class="text-gray-600 hover:text-red-600 text-sm sm:text-base" href="about.html">About us</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="text-lg sm:text-xl">Services</h3>
+          <ul class="mt-2 space-y-2">
+            <li><a class="text-gray-600 hover:text-red-600 text-sm sm:text-base" href="indoor.html">Indoor Lights</a></li>
+            <li><a class="text-gray-600 hover:text-red-600 text-sm sm:text-base" href="outdoor.html">Outdoor Lights</a></li>
+            <li><a class="text-gray-600 hover:text-red-600 text-sm sm:text-base" href="Decorative.html">Decorative Lights</a></li>
+            <li><a class="text-gray-600 hover:text-red-600 text-sm sm:text-base" href="">Strip Lights</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="text-lg sm:text-xl">Contact</h3>
+          <p class="mt-2 text-gray-600 text-sm sm:text-base">
+            Address: 2nd floor, Above HDFC Bank, Alark Shopping Mall, Lalghati Square, Bhopal (MP)
+          </p>
+          <p class="mt-2 text-gray-600 text-sm sm:text-base">Email: hellotrabo@gmail.com</p>
+          <p class="mt-2 text-gray-600 font-bold text-sm sm:text-base">Contact No:</p>
+          <p class="mt-1 text-gray-600 text-sm sm:text-base">888-999-1466, 888-999-1491, 888-999-1494</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
