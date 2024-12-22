@@ -21,12 +21,17 @@
   <!-- Header -->
   <header class="bg-white shadow-md">
     <div class="w-full h-[89px] px-4 py-4 bg-white shadow flex justify-between items-center">
+      <!-- Logo -->
       <img class="w-[120px] h-[60px] ml-4 sm:ml-10" src="./image/Logo.png" alt="Logo">
+      
+      <!-- Hamburger Icon (visible only on small screens) -->
       <div class="lg:hidden flex items-center cursor-pointer" id="hamburger-icon">
         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="w-6 h-6">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
         </svg>
       </div>
+  
+      <!-- Navigation Links (visible on medium and large screens) -->
       <div class="hidden lg:flex items-center gap-6 mr-4 sm:mr-10">
         <a href="index.html" class="text-[#545454] text-sm sm:text-base font-medium hover:text-[#c2282d] hover:underline-animation">Home</a>
         <a href="about.html" class="text-[#545454] text-sm sm:text-base font-medium hover:text-[#c2282d] hover:underline-animation">About Us</a>
@@ -37,7 +42,7 @@
       </div>
     </div>
   
-    <!-- Sidebar -->
+    <!-- Sidebar for mobile (hidden by default) -->
     <div class="fixed top-0 right-0 w-64 h-full bg-white shadow-lg transform translate-x-full transition-transform duration-300 z-50" id="sidebar">
       <div class="flex justify-end p-4">
         <button class="text-2xl" id="close-sidebar">×</button>
@@ -51,6 +56,8 @@
         <a href="partner.html" class="bg-[#c2282d] text-white py-2 px-4 sm:py-2 sm:px-6 rounded hover:bg-[#a31d26]">Become Partner</a>
       </nav>
     </div>
+  
+    <!-- Overlay for mobile (hidden by default) -->
     <div class="fixed inset-0 bg-gray-500 bg-opacity-50 z-40 hidden" id="overlay"></div>
   
     <script>
@@ -81,6 +88,7 @@
       });
     </script>
   </header>
+  
   <!-- Add this CSS for hover underline animation -->
   <style>
     /* Prevent scrolling when overflow-hidden is added to body */
@@ -122,62 +130,49 @@
   
   
  
- 
- <section class="w-full max-w-[1226px] mx-auto mt-[60px] flex flex-col lg:flex-row gap-[20px]">
+  <section class="w-full max-w-[1226px] mx-auto mt-[60px] flex flex-col lg:flex-row gap-[20px]">
     <!-- Left Section (Menu) -->
-   <div class="w-full lg:w-[305px] lg:mt-0">
-  <section class="w-full">
-    <div class="flex lg:flex-col gap-4 overflow-x-auto lg:overflow-x-visible scrollbar-hide sm:justify-center">
-      <div class="min-w-[150px] bg-[#545454] h-11 rounded flex justify-center items-center text-white text-base font-['Roboto']">
-        <a href="Decorative.html" class="w-full h-full flex items-center justify-center">
-          Decorative Lights
-        </a>
-      </div>
-      
-      <div class="min-w-[150px] h-11 bg-[#545454] rounded flex justify-center items-center text-white text-base font-['Roboto']">
-        <a href="indoor.html" class="w-full h-full flex items-center justify-center">
-          Indoor Lights
-        </a>
-      </div>
-      
-      <div class="min-w-[150px] h-11 bg-[#c2282d] rounded flex justify-center items-center text-white text-base font-['Roboto']">
-        <a href="outdoor.html" class="w-full h-full flex items-center justify-center">
-          Outdoor Lights
-        </a>
-      </div>
-
-      <div class="min-w-[150px] h-11 bg-[#545454] rounded flex justify-center items-center text-white text-base font-['Roboto']">
-        <a href="#" class="w-full h-full flex items-center justify-center">
-          Strip Lights
-        </a>
-      </div>
+    <div class="w-full lg:w-[305px] lg:mt-0">
+      <section class="w-full">
+        <div class="flex lg:flex-col gap-4 overflow-x-auto lg:overflow-x-visible scrollbar-hide sm:justify-center">
+          <div class="min-w-[150px] bg-[#545454] h-11 rounded flex justify-center items-center text-white text-base font-['Roboto']">
+            <a href="Decorative.html" class="w-full h-full flex items-center justify-center">Decorative Lights</a>
+          </div>
+          <div class="min-w-[150px] h-11 bg-[#545454] rounded flex justify-center items-center text-white text-base font-['Roboto']">
+            <a href="indoor.html" class="w-full h-full flex items-center justify-center">Indoor Lights</a>
+          </div>
+          <div class="min-w-[150px] h-11 bg-[#c2282d] rounded flex justify-center items-center text-white text-base font-['Roboto']">
+            <a href="outdoor.html" class="w-full h-full flex items-center justify-center">Outdoor Lights</a>
+          </div>
+          <div class="min-w-[150px] h-11 bg-[#545454] rounded flex justify-center items-center text-white text-base font-['Roboto']">
+            <a href="#" class="w-full h-full flex items-center justify-center">Strip Lights</a>
+          </div>
+        </div>
+      </section>
+  
+      <style>
+        /* Hide scrollbar for all browsers */
+        .scrollbar-hide {
+          -ms-overflow-style: none; /* IE and Edge */
+          scrollbar-width: none; /* Firefox */
+        }
+        .scrollbar-hide::-webkit-scrollbar {
+          display: none; /* Chrome, Safari, and Opera */
+        }
+      </style>
     </div>
-  </section>
-  
-  <style>
-    /* Hide scrollbar for all browsers */
-    .scrollbar-hide {
-      -ms-overflow-style: none; /* IE and Edge */
-      scrollbar-width: none; /* Firefox */
-    }
-    .scrollbar-hide::-webkit-scrollbar {
-      display: none; /* Chrome, Safari, and Opera */
-    }
-  </style> 
-</div>
-  
+    
     <!-- Right Section (Cards) -->
-   <div class="w-full mx-auto lg:w-[913px]">
+    <div class="w-full mx-auto lg:w-[913px]">
       <!-- Title Section -->
-     <div class="flex justify-center sm:justify-start">
+      <div class="flex justify-center sm:justify-start">
         <div class="w-[143px] text-center text-[#545454] text-base font-['Roboto'] mb-[20px]">
           Outdoor Lights
         </div>
       </div>
-      
-    
-      <!-- Cards Container -->
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-[20px] justify-items-center">
+  
+      <!-- Cards Container (Responsive Grid) -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-[20px] justify-items-center">
         <!-- Single Card -->
         <div class="w-full max-w-[285px] h-[323px] bg-white shadow-lg rounded-lg p-4 flex flex-col">
           <div class="flex items-center mb-4">
@@ -189,7 +184,7 @@
           </div>
           <img src="./image/K1.png" alt="RIMLESS DOWNLIGHT" class="object-cover w-full h-[135px] rounded">
         </div>
-    
+  
         <!-- Additional Cards -->
         <div class="w-full max-w-[285px] h-[323px] bg-white shadow-lg rounded-lg p-4 flex flex-col">
           <div class="flex items-center mb-4">
@@ -201,7 +196,7 @@
           </div>
           <img src="./image/K2.png" alt="DELTA COB" class="object-cover w-full h-[135px] rounded">
         </div>
-    
+  
         <div class="w-full max-w-[285px] h-[323px] bg-white shadow-lg rounded-lg p-4 flex flex-col">
           <div class="flex items-center mb-4">
             <div class="w-[4px] h-[61px] mr-4 bg-[#c2282d]"></div>
@@ -212,7 +207,7 @@
           </div>
           <img src="./image/K3.png" alt="SIGMA COB" class="object-cover w-full h-[135px] rounded">
         </div>
-    
+  
         <div class="w-full max-w-[285px] h-[323px] bg-white shadow-lg rounded-lg p-4 flex flex-col">
           <div class="flex items-center mb-4">
             <div class="w-[4px] h-[61px] mr-4 bg-[#c2282d]"></div>
@@ -223,7 +218,7 @@
           </div>
           <img src="./image/K4.png" alt="OMEGA CYLINDER SURFACE COB" class="object-cover w-full h-[135px] rounded">
         </div>
-    
+  
         <div class="w-full max-w-[285px] h-[323px] bg-white shadow-lg rounded-lg p-4 flex flex-col">
           <div class="flex items-center mb-4">
             <div class="w-[4px] h-[61px] mr-4 bg-[#c2282d]"></div>
@@ -234,7 +229,7 @@
           </div>
           <img src="./image/K5.png" alt="ALPHA CYLINDER SURFACE COB" class="object-cover w-full h-[135px] rounded">
         </div>
-    
+  
         <div class="w-full max-w-[285px] h-[323px] bg-white shadow-lg rounded-lg p-4 flex flex-col">
           <div class="flex items-center mb-4">
             <div class="w-[4px] h-[61px] mr-4 bg-[#c2282d]"></div>
@@ -245,7 +240,7 @@
           </div>
           <img src="./image/K6.png" alt="AMBER COB" class="object-cover w-full h-[135px] rounded">
         </div>
-    
+  
         <div class="w-full max-w-[285px] h-[323px] bg-white shadow-lg rounded-lg p-4 flex flex-col">
           <div class="flex items-center mb-4">
             <div class="w-[4px] h-[61px] mr-4 bg-[#c2282d]"></div>
@@ -258,45 +253,46 @@
         </div>
       </div>
     </div>
-    </div>
   </section>
   
   
  
-   <section class="bg-cover bg-center text-white py-8 md:py-12 h-auto md:h-[413px] relative mt-[35px] sm:mt-[352px]" style="background-image: url('./image/11P.png');">
+  <section class="bg-cover bg-center text-white py-8 md:py-12 h-auto md:h-[413px] relative mt-[35px] sm:mt-[352px]" style="background-image: url('./image/11P.png');">
     <!-- Custom color overlay with 80% opacity -->
     <div class="absolute inset-0 bg-[#C2282D]/80"></div>
-
+  
     <div class="container mx-auto grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-4 text-center relative px-4 md:px-6 mt-4 md:mt-6">
-        <!-- Happy Clients -->
-        <div class="flex flex-col items-center">
-            <img src="./image/s.png" alt="Happy Clients Icon" class="w-[60px] h-[60px] sm:w-[80px] sm:h-[80px] md:w-[100px] md:h-[100px]" />
-            <h2 class="text-[18px] sm:text-[24px] md:text-[32px] lg:text-[40px] font-bold mt-2">50000+</h2>
-            <p class="text-sm sm:text-base md:text-lg lg:text-[20px]">Happy Clients</p>
-        </div>
-
-        <!-- Industrial Projects -->
-        <div class="flex flex-col items-center">
-            <img src="./image/s2.png" alt="Industrial Projects Icon" class="w-[60px] h-[60px] sm:w-[80px] sm:h-[80px] md:w-[100px] md:h-[100px]" />
-            <h2 class="text-[18px] sm:text-[24px] md:text-[32px] lg:text-[40px] font-bold mt-2">45+</h2>
-            <p class="text-sm sm:text-base md:text-lg lg:text-[20px]">Industrial Projects</p>
-        </div>
-
-        <!-- Commercial Projects -->
-        <div class="flex flex-col items-center">
-            <img src="./image/s3.png" alt="Commercial Projects Icon" class="w-[60px] h-[60px] sm:w-[80px] sm:h-[80px] md:w-[100px] md:h-[100px]" />
-            <h2 class="text-[18px] sm:text-[24px] md:text-[32px] lg:text-[40px] font-bold mt-2">100K</h2>
-            <p class="text-sm sm:text-base md:text-lg lg:text-[20px]">Commercial Projects</p>
-        </div>
-
-        <!-- Residential Projects -->
-        <div class="flex flex-col items-center">
-            <img src="./image/s4.png" alt="Residential Projects Icon" class="w-[60px] h-[60px] sm:w-[80px] sm:h-[80px] md:w-[100px] md:h-[100px]" />
-            <h2 class="text-[18px] sm:text-[24px] md:text-[32px] lg:text-[40px] font-bold mt-2">1000+</h2>
-            <p class="text-sm sm:text-base md:text-lg lg:text-[20px]">Residential Projects</p>
-        </div>
+      
+      <!-- Happy Clients -->
+      <div class="flex flex-col items-center">
+        <img src="./image/s.png" alt="Happy Clients Icon" class="w-[60px] h-[60px] sm:w-[80px] sm:h-[80px] md:w-[100px] md:h-[100px]" />
+        <h2 class="text-[18px] sm:text-[24px] md:text-[32px] lg:text-[40px] font-bold mt-2">50000+</h2>
+        <p class="text-sm sm:text-base md:text-lg lg:text-[20px]">Happy Clients</p>
+      </div>
+  
+      <!-- Industrial Projects -->
+      <div class="flex flex-col items-center">
+        <img src="./image/s2.png" alt="Industrial Projects Icon" class="w-[60px] h-[60px] sm:w-[80px] sm:h-[80px] md:w-[100px] md:h-[100px]" />
+        <h2 class="text-[18px] sm:text-[24px] md:text-[32px] lg:text-[40px] font-bold mt-2">45+</h2>
+        <p class="text-sm sm:text-base md:text-lg lg:text-[20px]">Industrial Projects</p>
+      </div>
+  
+      <!-- Commercial Projects -->
+      <div class="flex flex-col items-center">
+        <img src="./image/s3.png" alt="Commercial Projects Icon" class="w-[60px] h-[60px] sm:w-[80px] sm:h-[80px] md:w-[100px] md:h-[100px]" />
+        <h2 class="text-[18px] sm:text-[24px] md:text-[32px] lg:text-[40px] font-bold mt-2">100K</h2>
+        <p class="text-sm sm:text-base md:text-lg lg:text-[20px]">Commercial Projects</p>
+      </div>
+  
+      <!-- Residential Projects -->
+      <div class="flex flex-col items-center">
+        <img src="./image/s4.png" alt="Residential Projects Icon" class="w-[60px] h-[60px] sm:w-[80px] sm:h-[80px] md:w-[100px] md:h-[100px]" />
+        <h2 class="text-[18px] sm:text-[24px] md:text-[32px] lg:text-[40px] font-bold mt-2">1000+</h2>
+        <p class="text-sm sm:text-base md:text-lg lg:text-[20px]">Residential Projects</p>
+      </div>
+  
     </div>
-</section>
+  </section>
   
   <section class="w-full max-w-[1257px] h-auto relative mx-auto px-4 sm:px-0 mt-[30px] sm:mt-[157px]">
     <!-- Text Section -->
@@ -309,55 +305,53 @@
       </div>
     </div>
   
-    <!-- Image Section -->
-    <div class="flex flex-wrap justify-center sm:justify-center items-center gap-6 sm:gap-[19px] mt-4 sm:mt-[81px]">
+    <!-- Image Section (Grid Layout) -->
+    <div class="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 gap-6 sm:gap-[19px] mt-4 sm:mt-[81px]">
       <!-- Image Block 1 -->
-      <div class="w-full sm:w-[250px] md:w-[300px] h-[80px] sm:h-[100px] relative">
-        <div class="w-full h-full bg-[#F7F7F7]"></div>
+      <div class="w-full h-[80px] sm:h-[100px] relative bg-[#F7F7F7]">
         <img class="w-full h-full object-contain absolute left-0 top-0" src="./image/Dom.png" alt="Dom logo" />
       </div>
   
       <!-- Image Block 2 -->
-      <div class="w-full sm:w-[250px] md:w-[300px] h-[80px] sm:h-[100px] relative">
-        <div class="w-full h-full bg-[#F7F7F7]"></div>
+      <div class="w-full h-[80px] sm:h-[100px] relative bg-[#F7F7F7]">
         <img class="w-full h-full object-contain absolute left-0 top-0" src="./image/netlink.png" alt="Netlink logo" />
       </div>
   
       <!-- Image Block 3 -->
-      <div class="w-full sm:w-[250px] md:w-[300px] h-[80px] sm:h-[100px] relative">
-        <div class="w-full h-full bg-[#F7F7F7]"></div>
+      <div class="w-full h-[80px] sm:h-[100px] relative bg-[#F7F7F7]">
         <img class="w-full h-full object-contain absolute left-0 top-0" src="./image/oport.png" alt="Oport logo" />
       </div>
   
       <!-- Image Block 4 -->
-      <div class="w-full sm:w-[250px] md:w-[300px] h-[80px] sm:h-[100px] relative">
-        <div class="w-full h-full bg-[#F7F7F7]"></div>
+      <div class="w-full h-[80px] sm:h-[100px] relative bg-[#F7F7F7]">
         <img class="w-full h-full object-contain absolute left-0 top-0" src="./image/LNCT.png" alt="LNCT logo" />
       </div>
     </div>
   </section>
+  
 
-   <section 
+  <section 
   class="w-full h-[250px] sm:h-[387px] md:h-[387px] lg:h-[387px] relative mx-auto mt-[30px] sm:mt-[224px]" 
   style="background-image: url('./image/12P.png'); background-size: cover; background-position: center;">
   
   <!-- Overlay Background -->
   <div class="absolute inset-0 bg-black/70"></div>
   
-  <!-- Content Wrapper -->
-  <div class="w-full max-w-[90%] sm:max-w-[720px] md:max-w-[900px] lg:max-w-[1080px] h-auto absolute left-1/2 transform -translate-x-1/2 top-[25%] sm:top-[25%] lg:top-[25%] text-center px-auto sm:px-6">
+  <!-- Content Wrapper using Grid -->
+  <div class="w-full max-w-[90%] sm:max-w-[720px] md:max-w-[900px] lg:max-w-[1080px] h-auto absolute left-1/2 transform -translate-x-1/2 top-[25%] sm:top-[25%] lg:top-[25%] text-center px-auto sm:px-6 grid grid-cols-1 gap-4 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-1">
+    
     <!-- Heading -->
     <h3 class="text-white text-[28px] sm:text-[28px] md:text-[36px] lg:text-[50px] font-regular font-['DM Serif Display'] leading-[28px] sm:leading-[36px] md:leading-[50px] lg:leading-[62px]">
       Become A Partner
     </h3>
-
+  
     <!-- Subheading -->
     <p class="text-white text-[16px] sm:text-[18px] md:text-[20px] lg:text-[22px] font-['Jost'] font-medium leading-[20px] sm:leading-[28px] md:leading-[30px] lg:leading-[33px] tracking-tight mt-2 sm:mt-4">
       Join the Trabo LED Lights Family
     </p>
-
+  
     <!-- CTA Button -->
-    <a href="#" 
+    <a href="partner.html" 
        class="bg-[#c2282d] text-white text-[14px] sm:text-[16px] md:text-[18px] lg:text-[18px] font-['Roboto'] font-semibold rounded-[10px] shadow mt-4 sm:mt-5 inline-block flex items-center justify-center w-[140px] sm:w-[180px] md:w-[200px] lg:w-[237px] h-[40px] sm:h-[50px] md:h-[60px] lg:h-[75px] mx-auto">
       Contact Us
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-3 h-3 sm:w-4 sm:h-4 lg:w-5 lg:h-5 ml-2">
@@ -365,52 +359,61 @@
       </svg>
     </a>
   </div>
-</section>
+  </section>
+  
   
 
   <!-- Footer -->
-  <footer class="background-color: #F7F7F7; py-8 mt-[20px]">
-  <div class="container mx-auto px-4 sm:px-6">
-    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-      <div>
-        <img alt="Trabo LED Lights Logo" class="h-[50px] w-auto" src="./image/Logo.png" />
-        <p class="mt-4 text-gray-600 text-sm sm:text-base">
-          It is a long established fact that a reader will be distracted looking.
-        </p>
-        <div class="flex space-x-4 mt-4">
-          <a class="text-red-600 hover:text-red-600" href="#"><i class="fab fa-facebook-f"></i></a>
-          <a class="text-red-600 hover:text-red-600" href="#"><i class="fab fa-twitter"></i></a>
-          <a class="text-red-600 hover:text-red-600" href="https://www.instagram.com/trabolights/"><i class="fab fa-instagram"></i></a>
-          <a class="text-red-600 hover:text-red-600" href="#"><i class="fab fa-linkedin-in"></i></a>
+  <footer class="bg-[#F7F7F7] py-8 mt-[20px]">
+    <div class="container mx-auto px-4 sm:px-6">
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <!-- Logo and Social Links -->
+        <div>
+          <img alt="Trabo LED Lights Logo" class="h-[50px] w-auto" src="./image/Logo.png" />
+          <p class="mt-4 text-gray-600 text-sm sm:text-base">
+            It is a long established fact that a reader will be distracted looking.
+          </p>
+          <div class="flex space-x-4 mt-4">
+            <a class="text-red-600 hover:text-red-600" href="#"><i class="fab fa-facebook-f"></i></a>
+            <a class="text-red-600 hover:text-red-600" href="#"><i class="fab fa-twitter"></i></a>
+            <a class="text-red-600 hover:text-red-600" href="https://www.instagram.com/trabolights/"><i class="fab fa-instagram"></i></a>
+            <a class="text-red-600 hover:text-red-600" href="#"><i class="fab fa-linkedin-in"></i></a>
+          </div>
+        </div>
+  
+        <!-- Pages Section -->
+        <div>
+          <h3 class="text-lg sm:text-xl font-medium">Pages</h3>
+          <ul class="mt-2 space-y-2">
+            <li><a class="text-gray-600 hover:text-red-600 text-sm sm:text-base" href="index.html">Home</a></li>
+            <li><a class="text-gray-600 hover:text-red-600 text-sm sm:text-base" href="about.html">About us</a></li>
+          </ul>
+        </div>
+  
+        <!-- Services Section -->
+        <div>
+          <h3 class="text-lg sm:text-xl font-medium">Services</h3>
+          <ul class="mt-2 space-y-2">
+            <li><a class="text-gray-600 hover:text-red-600 text-sm sm:text-base" href="indoor.html">Indoor Lights</a></li>
+            <li><a class="text-gray-600 hover:text-red-600 text-sm sm:text-base" href="outdoor.html">Outdoor Lights</a></li>
+            <li><a class="text-gray-600 hover:text-red-600 text-sm sm:text-base" href="Decorative.html">Decorative Lights</a></li>
+            <li><a class="text-gray-600 hover:text-red-600 text-sm sm:text-base" href="">Strip Lights</a></li>
+          </ul>
+        </div>
+  
+        <!-- Contact Section -->
+        <div>
+          <h3 class="text-lg sm:text-xl font-medium">Contact</h3>
+          <p class="mt-2 text-gray-600 text-sm sm:text-base">
+            Address: 2nd floor, Above HDFC Bank, Alark Shopping Mall, Lalghati Square, Bhopal (MP)
+          </p>
+          <p class="mt-2 text-gray-600 text-sm sm:text-base">Email: hellotrabo@gmail.com</p>
+          <p class="mt-2 text-gray-600 font-bold text-sm sm:text-base">Contact No:</p>
+          <p class="mt-1 text-gray-600 text-sm sm:text-base">888-999-1466, 888-999-1491,<br> 888-999-1494</p>
         </div>
       </div>
-      <div>
-        <h3 class="text-lg sm:text-xl">Pages</h3>
-        <ul class="mt-2 space-y-2">
-          <li><a class="text-gray-600 hover:text-red-600 text-sm sm:text-base" href="index.html">Home</a></li>
-          <li><a class="text-gray-600 hover:text-red-600 text-sm sm:text-base" href="about.html">About us</a></li>
-        </ul>
-      </div>
-      <div>
-        <h3 class="text-lg sm:text-xl">Services</h3>
-        <ul class="mt-2 space-y-2">
-          <li><a class="text-gray-600 hover:text-red-600 text-sm sm:text-base" href="indoor.html">Indoor Lights</a></li>
-          <li><a class="text-gray-600 hover:text-red-600 text-sm sm:text-base" href="outdoor.html">Outdoor Lights</a></li>
-          <li><a class="text-gray-600 hover:text-red-600 text-sm sm:text-base" href="Decorative.html">Decorative Lights</a></li>
-          <li><a class="text-gray-600 hover:text-red-600 text-sm sm:text-base" href="">Strip Lights</a></li>
-        </ul>
-      </div>
-      <div>
-        <h3 class="text-lg sm:text-xl">Contact</h3>
-        <p class="mt-2 text-gray-600 text-sm sm:text-base">
-          Address: 2nd floor, Above HDFC Bank, Alark Shopping Mall, Lalghati Square, Bhopal (MP)
-        </p>
-        <p class="mt-2 text-gray-600 text-sm sm:text-base">Email: hellotrabo@gmail.com</p>
-        <p class="mt-2 text-gray-600 font-bold text-sm sm:text-base">Contact No:</p>
-        <p class="mt-1 text-gray-600 text-sm sm:text-base">888-999-1466, 888-999-1491, 888-999-1494</p>
-      </div>
     </div>
-  </div>
-</footer>
+  </footer>
+  
 </body>
 </html>
