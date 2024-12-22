@@ -122,10 +122,11 @@
   
   
   
- <section 
+  <section 
   class="w-full max-w-[90%] sm:max-w-[95%] md:max-w-[1226px] h-[400px] sm:h-[441px] relative mx-auto mt-[40px] sm:mt-[50px] md:mt-[60px] rounded-xl" 
   id="imageSection" 
   style="background-size: cover; background-position: center; transition: background-image 1s ease-in-out;">
+  
   <!-- Overlay -->
   <div class="absolute w-full h-full bg-[#0e0303]/70 rounded-xl"></div>
   
@@ -136,11 +137,15 @@
     <div class="w-3 h-3 sm:w-4 sm:h-4 bg-[#d9d9d9] rounded-full"></div>
   </div>
   
-  <!-- Content -->
-  <div class="absolute top-[15%] sm:top-[20%] left-1/2 transform -translate-x-1/2 w-[90%] sm:w-[80%] md:w-[827px] text-center text-white px-4 sm:px-0">
+  <!-- Grid Content -->
+  <div class="absolute top-[15%] sm:top-[20%] left-1/2 transform -translate-x-1/2 w-[90%] sm:w-[80%] md:w-[827px] text-center text-white px-4 sm:px-0 grid gap-4">
+    
+    <!-- Title -->
     <h1 class="text-[20px] sm:text-[36px] md:text-[50px] font-normal font-['DM Serif Display'] leading-[28px] sm:leading-[46px] md:leading-[62.5px]">
       About Trabo
     </h1>
+    
+    <!-- Paragraph -->
     <p class="text-sm sm:text-base md:text-lg font-normal font-['Roboto'] leading-[20px] sm:leading-[28px] md:leading-[35px] tracking-tight mt-3 sm:mt-4">
       Our lighting solutions are designed to be more than just a replacement for conventional lighting. With an unprecedented lifespan and the highest efficacy of any commercial technology, TRABO lighting will take you beyond conventional lighting and into a world of unparalleled beauty and elegance.
     </p>
@@ -176,114 +181,121 @@
   changeImage();
 </script>
 
-
-  <section class="w-full max-w-[90%] lg:max-w-[1217px] relative mx-auto mt-[50px] lg:mt-[70px] px-4 sm:px-0">
-    <div class="w-full h-auto lg:w-[1217px] lg:h-[804px] bg-white rounded-lg shadow mx-auto relative">
-      <!-- Title -->
-      <h1 class="text-[#c2282d] text-[20px] sm:text-[24px] lg:text-[36px] font-regular font-['DM Serif Display'] leading-[28px] sm:leading-[32px] lg:leading-[45px] mt-[20px] lg:mt-[20px] lg:ml-[63px] text-center lg:text-left pt-[30px]">
-        Trabo LED Light
-      </h1>
-      
-      
+<section class="w-full max-w-[90%] lg:max-w-[1217px] relative mx-auto mt-[50px] lg:mt-[70px] px-4 sm:px-0">
+  <div class="w-full h-auto lg:w-[1217px] lg:h-[804px] bg-white rounded-lg shadow mx-auto relative">
+    
+    <!-- Title -->
+    <h1 class="text-[#c2282d] text-[20px] sm:text-[24px] lg:text-[36px] font-regular font-['DM Serif Display'] leading-[28px] sm:leading-[32px] lg:leading-[45px] mt-[20px] lg:mt-[20px] lg:ml-[63px] text-center lg:text-left pt-[30px]">
+      Trabo LED Light
+    </h1>
   
-      <!-- Content Text -->
-      <div class="text-[#545454] text-sm sm:text-base lg:text-[20px] font-normal font-['Roboto'] leading-5 sm:leading-6 lg:leading-[35px] tracking-tight mt-6 lg:mt-0 lg:absolute lg:top-[151px] lg:left-[65px] lg:w-[657px] px-2 lg:px-0">
-        TRABO illuminates your world with state-of-the-art lighting solutions that will transform your living spaces like never before. As a leading provider of LED strip lights, we offer an extensive range of products at highly competitive prices without compromising on quality.
-        <br /><br />
-        Our human-centric approach to lighting merges cutting-edge aesthetics with technological and electronic expertise, making us a proud Indian brand that can elevate your lifestyle and bring a touch of sophistication to your decor.
-        <br /><br />
-        Our lighting solutions are designed to be more than just a replacement for conventional lighting. With an unprecedented lifespan and the highest efficacy of any commercial technology, TRABO lighting will take you beyond conventional lighting and into a world of unparalleled beauty and elegance.
-      </div>
-  
-      <!-- Image -->
-      <img
-        class="w-[250px] sm:w-[300px] lg:w-[500px] h-auto mx-auto lg:absolute lg:left-[720px] lg:top-[188px] mt-6 lg:mt-0"
-        src="./image/Sigma 1.png"
-        alt="Trabo LED Light"
-      />
+    <!-- Content Text -->
+    <div class="text-[#545454] text-sm sm:text-base lg:text-[20px] font-normal font-['Roboto'] leading-5 sm:leading-6 lg:leading-[35px] tracking-tight mt-6 lg:mt-0 lg:absolute lg:top-[151px] lg:left-[65px] lg:w-[657px] px-2 lg:px-0">
+      TRABO illuminates your world with state-of-the-art lighting solutions that will transform your living spaces like never before. As a leading provider of LED strip lights, we offer an extensive range of products at highly competitive prices without compromising on quality.
+      <br /><br />
+      Our human-centric approach to lighting merges cutting-edge aesthetics with technological and electronic expertise, making us a proud Indian brand that can elevate your lifestyle and bring a touch of sophistication to your decor.
+      <br /><br />
+      Our lighting solutions are designed to be more than just a replacement for conventional lighting. With an unprecedented lifespan and the highest efficacy of any commercial technology, TRABO lighting will take you beyond conventional lighting and into a world of unparalleled beauty and elegance.
     </div>
-  </section>
   
-  <section class="bg-cover bg-center text-white py-8 md:py-12 h-auto md:h-[413px] relative mt-[53px] sm:mt-[108px]" style="background-image: url('./image/11P.png');">
-    <!-- Custom color overlay with 80% opacity -->
-    <div class="absolute inset-0 bg-[#C2282D]/80"></div>
-
-    <div class="container mx-auto grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-4 text-center relative px-4 md:px-6 mt-4 md:mt-6">
-        <!-- Happy Clients -->
-        <div class="flex flex-col items-center">
-            <img src="./image/s.png" alt="Happy Clients Icon" class="w-[60px] h-[60px] sm:w-[80px] sm:h-[80px] md:w-[100px] md:h-[100px]" />
-            <h2 class="text-[18px] sm:text-[24px] md:text-[32px] lg:text-[40px] font-bold mt-2">50000+</h2>
-            <p class="text-sm sm:text-base md:text-lg lg:text-[20px]">Happy Clients</p>
-        </div>
-
-        <!-- Industrial Projects -->
-        <div class="flex flex-col items-center">
-            <img src="./image/s2.png" alt="Industrial Projects Icon" class="w-[60px] h-[60px] sm:w-[80px] sm:h-[80px] md:w-[100px] md:h-[100px]" />
-            <h2 class="text-[18px] sm:text-[24px] md:text-[32px] lg:text-[40px] font-bold mt-2">45+</h2>
-            <p class="text-sm sm:text-base md:text-lg lg:text-[20px]">Industrial Projects</p>
-        </div>
-
-        <!-- Commercial Projects -->
-        <div class="flex flex-col items-center">
-            <img src="./image/s3.png" alt="Commercial Projects Icon" class="w-[60px] h-[60px] sm:w-[80px] sm:h-[80px] md:w-[100px] md:h-[100px]" />
-            <h2 class="text-[18px] sm:text-[24px] md:text-[32px] lg:text-[40px] font-bold mt-2">100K</h2>
-            <p class="text-sm sm:text-base md:text-lg lg:text-[20px]">Commercial Projects</p>
-        </div>
-
-        <!-- Residential Projects -->
-        <div class="flex flex-col items-center">
-            <img src="./image/s4.png" alt="Residential Projects Icon" class="w-[60px] h-[60px] sm:w-[80px] sm:h-[80px] md:w-[100px] md:h-[100px]" />
-            <h2 class="text-[18px] sm:text-[24px] md:text-[32px] lg:text-[40px] font-bold mt-2">1000+</h2>
-            <p class="text-sm sm:text-base md:text-lg lg:text-[20px]">Residential Projects</p>
-        </div>
-    </div>
+    <!-- Image -->
+    <img
+      class="w-[250px] sm:w-[300px] lg:w-[500px] h-auto mx-auto lg:absolute lg:left-[720px] lg:top-[188px] mt-6 lg:mt-0"
+      src="./image/Sigma 1.png"
+      alt="Trabo LED Light"
+    />
+  </div>
 </section>
+
+
+
   
-  <section class="w-full max-w-[90%] lg:max-w-[1231px] relative mx-auto mt-[60px] sm:mt-[119px] px-6 sm:px-0">
-    <!-- Vision Section -->
-    <div class="flex flex-col-reverse sm:flex-row items-center w-full h-auto sm:h-[353px]">
+<section class="bg-cover bg-center text-white py-8 md:py-12 h-auto md:h-[413px] relative mt-[53px] sm:mt-[108px]" style="background-image: url('./image/11P.png');">
+  <!-- Custom color overlay with 80% opacity -->
+  <div class="absolute inset-0 bg-[#C2282D]/80"></div>
+
+  <div class="container mx-auto text-center relative px-4 md:px-6 mt-4 md:mt-6">
+      <!-- Grid Layout for larger screens and a single column for smaller screens -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-4 gap-6">
+          <!-- Happy Clients -->
+          <div class="flex flex-col items-center">
+              <img src="./image/s.png" alt="Happy Clients Icon" class="w-[60px] h-[60px] sm:w-[80px] sm:h-[80px] md:w-[100px] md:h-[100px]" />
+              <h2 class="text-[18px] sm:text-[24px] md:text-[32px] lg:text-[40px] font-bold mt-2">50000+</h2>
+              <p class="text-sm sm:text-base md:text-lg lg:text-[20px]">Happy Clients</p>
+          </div>
+
+          <!-- Industrial Projects -->
+          <div class="flex flex-col items-center">
+              <img src="./image/s2.png" alt="Industrial Projects Icon" class="w-[60px] h-[60px] sm:w-[80px] sm:h-[80px] md:w-[100px] md:h-[100px]" />
+              <h2 class="text-[18px] sm:text-[24px] md:text-[32px] lg:text-[40px] font-bold mt-2">45+</h2>
+              <p class="text-sm sm:text-base md:text-lg lg:text-[20px]">Industrial Projects</p>
+          </div>
+
+          <!-- Commercial Projects -->
+          <div class="flex flex-col items-center">
+              <img src="./image/s3.png" alt="Commercial Projects Icon" class="w-[60px] h-[60px] sm:w-[80px] sm:h-[80px] md:w-[100px] md:h-[100px]" />
+              <h2 class="text-[18px] sm:text-[24px] md:text-[32px] lg:text-[40px] font-bold mt-2">100K</h2>
+              <p class="text-sm sm:text-base md:text-lg lg:text-[20px]">Commercial Projects</p>
+          </div>
+
+          <!-- Residential Projects -->
+          <div class="flex flex-col items-center">
+              <img src="./image/s4.png" alt="Residential Projects Icon" class="w-[60px] h-[60px] sm:w-[80px] sm:h-[80px] md:w-[100px] md:h-[100px]" />
+              <h2 class="text-[18px] sm:text-[24px] md:text-[32px] lg:text-[40px] font-bold mt-2">1000+</h2>
+              <p class="text-sm sm:text-base md:text-lg lg:text-[20px]">Residential Projects</p>
+          </div>
+      </div>
+  </div>
+</section>
+
+
+  
+<section class="w-full max-w-[90%] lg:max-w-[1231px] relative mx-auto mt-[60px] sm:mt-[119px] px-6 sm:px-0">
+  <!-- Vision Section -->
+  <div class="flex flex-col-reverse sm:flex-row items-center w-full h-auto sm:h-[353px]">
       <div class="w-full sm:w-[555px] text-center sm:text-left">
-        <h1 class="text-[#c2282d] text-[20px] sm:text-[28px] lg:text-[36px] font-regular font-['DM Serif Display'] leading-[28px] sm:leading-[32px] lg:leading-[45px] mt-4 sm:mt-0">
-          Our Vision
-        </h1>
-        <p class="text-[#545454] text-sm sm:text-base lg:text-[20px] font-regular font-['Roboto'] leading-5 sm:leading-6 lg:leading-[35px] mt-4">
-          Our vision is to help our customers reduce their carbon footprint while enjoying healthy, safe, and sustainable lighting solutions that promote energy savings. We strive to achieve this through ethical business practices, global reach, technological expertise, and building long-term relationships with all our associates, customers, partners, and employees.
-        </p>
+          <h1 class="text-[#c2282d] text-[20px] sm:text-[28px] lg:text-[36px] font-regular font-['DM Serif Display'] leading-[28px] sm:leading-[32px] lg:leading-[45px] mt-4 sm:mt-0">
+              Our Vision
+          </h1>
+          <p class="text-[#545454] text-sm sm:text-base lg:text-[20px] font-regular font-['Roboto'] leading-5 sm:leading-6 lg:leading-[35px] mt-4">
+              Our vision is to help our customers reduce their carbon footprint while enjoying healthy, safe, and sustainable lighting solutions that promote energy savings. We strive to achieve this through ethical business practices, global reach, technological expertise, and building long-term relationships with all our associates, customers, partners, and employees.
+          </p>
       </div>
       <img
-        class="w-full sm:w-[300px] md:w-[400px] lg:w-[600px] h-auto mb-6 sm:mb-0 ml-0 sm:ml-6"
-        src="./image/Group 1272629038.png"
-        alt="Vision Image"
+          class="w-full sm:w-[300px] md:w-[400px] lg:w-[600px] h-auto mb-6 sm:mb-0 ml-0 sm:ml-6"
+          src="./image/Group 1272629038.png"
+          alt="Vision Image"
       />
-    </div>
-  
-    <!-- Mission Section -->
-    <div class="flex flex-col sm:flex-row items-center w-full h-auto sm:h-[353px] mt-10">
+  </div>
+
+  <!-- Mission Section -->
+  <div class="flex flex-col sm:flex-row items-center w-full h-auto sm:h-[353px] mt-10">
       <img
-        class="w-full sm:w-[300px] md:w-[400px] lg:w-[596px] h-auto mb-6 sm:mb-0"
-        src="./image/image 5.png"
-        alt="Mission Image"
+          class="w-full sm:w-[300px] md:w-[400px] lg:w-[596px] h-auto mb-6 sm:mb-0"
+          src="./image/image 5.png"
+          alt="Mission Image"
       />
       <div class="w-full sm:w-[600px] text-center sm:text-left sm:ml-6">
-        <h1 class="text-[#c2282d] text-[20px] sm:text-[28px] lg:text-[36px] font-regular font-['DM Serif Display'] leading-[28px] sm:leading-[32px] lg:leading-[45px]">
-          Mission
-        </h1>
-        <p class="text-[#545454] text-sm sm:text-base lg:text-xl font-normal font-['Roboto'] leading-5 sm:leading-6 lg:leading-[35px] mt-4">
-          At TRABO, we are committed to delivering exceptional customer delight and pursuing excellence by constantly improving ourselves, our teams, our services, and our products. Join us on our journey to a brighter and more beautiful world.
-        </p>
+          <h1 class="text-[#c2282d] text-[20px] sm:text-[28px] lg:text-[36px] font-regular font-['DM Serif Display'] leading-[28px] sm:leading-[32px] lg:leading-[45px]">
+              Mission
+          </h1>
+          <p class="text-[#545454] text-sm sm:text-base lg:text-xl font-normal font-['Roboto'] leading-5 sm:leading-6 lg:leading-[35px] mt-4">
+              At TRABO, we are committed to delivering exceptional customer delight and pursuing excellence by constantly improving ourselves, our teams, our services, and our products. Join us on our journey to a brighter and more beautiful world.
+          </p>
       </div>
-    </div>
-  </section>
+  </div>
+</section>
 
-  <section 
+
+<section 
   class="w-full h-[250px] sm:h-[387px] md:h-[387px] lg:h-[387px] relative mx-auto mt-[53px] sm:mt-[533px]" 
   style="background-image: url('./image/12P.png'); background-size: cover; background-position: center;">
-  
+
   <!-- Overlay Background -->
   <div class="absolute inset-0 bg-black/70"></div>
-  
-  <!-- Content Wrapper -->
-  <div class="w-full max-w-[90%] sm:max-w-[720px] md:max-w-[900px] lg:max-w-[1080px] h-auto absolute left-1/2 transform -translate-x-1/2 top-[25%] sm:top-[25%] lg:top-[25%] text-center px-auto sm:px-6">
+
+  <!-- Content Wrapper using Grid -->
+  <div class="w-full max-w-[90%] sm:max-w-[720px] md:max-w-[900px] lg:max-w-[1080px] h-auto absolute left-1/2 transform -translate-x-1/2 top-[25%] sm:top-[25%] lg:top-[25%] grid place-items-center px-4 sm:px-6">
     <!-- Heading -->
     <h3 class="text-white text-[28px] sm:text-[28px] md:text-[36px] lg:text-[50px] font-regular font-['DM Serif Display'] leading-[28px] sm:leading-[36px] md:leading-[50px] lg:leading-[62px]">
       Become A Partner
@@ -295,7 +307,7 @@
     </p>
 
     <!-- CTA Button -->
-    <a href="#" 
+    <a href="partner.html" 
        class="bg-[#c2282d] text-white text-[14px] sm:text-[16px] md:text-[18px] lg:text-[18px] font-['Roboto'] font-semibold rounded-[10px] shadow mt-4 sm:mt-5 inline-block flex items-center justify-center w-[140px] sm:w-[180px] md:w-[200px] lg:w-[237px] h-[40px] sm:h-[50px] md:h-[60px] lg:h-[75px] mx-auto">
       Contact Us
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-3 h-3 sm:w-4 sm:h-4 lg:w-5 lg:h-5 ml-2">
@@ -305,49 +317,58 @@
   </div>
 </section>
 
+
   <!-- Footer -->
-<footer class="background-color: #F7F7F7; py-8  mt-[11px] sm:mt-[111px]">
-  <div class="container mx-auto px-4 sm:px-6">
-    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-      <div>
-        <img alt="Trabo LED Lights Logo" class="h-[50px] w-auto" src="./image/Logo.png" />
-        <p class="mt-4 text-gray-600 text-sm sm:text-base">
-          It is a long established fact that a reader will be distracted looking.
-        </p>
-        <div class="flex space-x-4 mt-4">
-          <a class="text-red-600 hover:text-red-600" href="#"><i class="fab fa-facebook-f"></i></a>
-          <a class="text-red-600 hover:text-red-600" href="#"><i class="fab fa-twitter"></i></a>
-          <a class="text-red-600 hover:text-red-600" href="https://www.instagram.com/trabolights/"><i class="fab fa-instagram"></i></a>
-          <a class="text-red-600 hover:text-red-600" href="#"><i class="fab fa-linkedin-in"></i></a>
+  <footer class="bg-[#F7F7F7] py-8 mt-[11px] sm:mt-[111px]">
+    <div class="container mx-auto px-4 sm:px-6">
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <!-- Logo and Social Links -->
+        <div>
+          <img alt="Trabo LED Lights Logo" class="h-[50px] w-auto" src="./image/Logo.png" />
+          <p class="mt-4 text-gray-600 text-sm sm:text-base">
+            It is a long established fact that a reader will be distracted looking.
+          </p>
+          <div class="flex space-x-4 mt-4">
+            <a class="text-red-600 hover:text-red-600" href="#"><i class="fab fa-facebook-f"></i></a>
+            <a class="text-red-600 hover:text-red-600" href="#"><i class="fab fa-twitter"></i></a>
+            <a class="text-red-600 hover:text-red-600" href="https://www.instagram.com/trabolights/"><i class="fab fa-instagram"></i></a>
+            <a class="text-red-600 hover:text-red-600" href="#"><i class="fab fa-linkedin-in"></i></a>
+          </div>
+        </div>
+  
+        <!-- Pages Section -->
+        <div>
+          <h3 class="text-lg sm:text-xl">Pages</h3>
+          <ul class="mt-2 space-y-2">
+            <li><a class="text-gray-600 hover:text-red-600 text-sm sm:text-base" href="index.html">Home</a></li>
+            <li><a class="text-gray-600 hover:text-red-600 text-sm sm:text-base" href="about.html">About us</a></li>
+          </ul>
+        </div>
+  
+        <!-- Services Section -->
+        <div>
+          <h3 class="text-lg sm:text-xl">Services</h3>
+          <ul class="mt-2 space-y-2">
+            <li><a class="text-gray-600 hover:text-red-600 text-sm sm:text-base" href="indoor.html">Indoor Lights</a></li>
+            <li><a class="text-gray-600 hover:text-red-600 text-sm sm:text-base" href="outdoor.html">Outdoor Lights</a></li>
+            <li><a class="text-gray-600 hover:text-red-600 text-sm sm:text-base" href="Decorative.html">Decorative Lights</a></li>
+            <li><a class="text-gray-600 hover:text-red-600 text-sm sm:text-base" href="">Strip Lights</a></li>
+          </ul>
+        </div>
+  
+        <!-- Contact Section -->
+        <div>
+          <h3 class="text-lg sm:text-xl">Contact</h3>
+          <p class="mt-2 text-gray-600 text-sm sm:text-base">
+            Address: 2nd floor, Above HDFC Bank, Alark Shopping Mall, Lalghati Square, Bhopal (MP)
+          </p>
+          <p class="mt-2 text-gray-600 text-sm sm:text-base">Email: hellotrabo@gmail.com</p>
+          <p class="mt-2 text-gray-600 font-bold text-sm sm:text-base">Contact No:</p>
+          <p class="mt-1 text-gray-600 text-sm sm:text-base">888-999-1466, 888-999-1491, <br> 888-999-1494</p>
         </div>
       </div>
-      <div>
-        <h3 class="text-lg sm:text-xl">Pages</h3>
-        <ul class="mt-2 space-y-2">
-          <li><a class="text-gray-600 hover:text-red-600 text-sm sm:text-base" href="index.html">Home</a></li>
-          <li><a class="text-gray-600 hover:text-red-600 text-sm sm:text-base" href="about.html">About us</a></li>
-        </ul>
-      </div>
-      <div>
-        <h3 class="text-lg sm:text-xl">Services</h3>
-        <ul class="mt-2 space-y-2">
-          <li><a class="text-gray-600 hover:text-red-600 text-sm sm:text-base" href="indoor.html">Indoor Lights</a></li>
-          <li><a class="text-gray-600 hover:text-red-600 text-sm sm:text-base" href="outdoor.html">Outdoor Lights</a></li>
-          <li><a class="text-gray-600 hover:text-red-600 text-sm sm:text-base" href="Decorative.html">Decorative Lights</a></li>
-          <li><a class="text-gray-600 hover:text-red-600 text-sm sm:text-base" href="">Strip Lights</a></li>
-        </ul>
-      </div>
-      <div>
-        <h3 class="text-lg sm:text-xl">Contact</h3>
-        <p class="mt-2 text-gray-600 text-sm sm:text-base">
-          Address: 2nd floor, Above HDFC Bank, Alark Shopping Mall, Lalghati Square, Bhopal (MP)
-        </p>
-        <p class="mt-2 text-gray-600 text-sm sm:text-base">Email: hellotrabo@gmail.com</p>
-        <p class="mt-2 text-gray-600 font-bold text-sm sm:text-base">Contact No:</p>
-        <p class="mt-1 text-gray-600 text-sm sm:text-base">888-999-1466, 888-999-1491, 888-999-1494</p>
-      </div>
     </div>
-  </div>
-</footer>
+  </footer>
+  
 </body>
 </html>
