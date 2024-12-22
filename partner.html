@@ -21,12 +21,17 @@
   <!-- Header -->
   <header class="bg-white shadow-md">
     <div class="w-full h-[89px] px-4 py-4 bg-white shadow flex justify-between items-center">
+      <!-- Logo -->
       <img class="w-[120px] h-[60px] ml-4 sm:ml-10" src="./image/Logo.png" alt="Logo">
+      
+      <!-- Hamburger Icon (visible only on small screens) -->
       <div class="lg:hidden flex items-center cursor-pointer" id="hamburger-icon">
         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="w-6 h-6">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
         </svg>
       </div>
+  
+      <!-- Navigation Links (visible on medium and large screens) -->
       <div class="hidden lg:flex items-center gap-6 mr-4 sm:mr-10">
         <a href="index.html" class="text-[#545454] text-sm sm:text-base font-medium hover:text-[#c2282d] hover:underline-animation">Home</a>
         <a href="about.html" class="text-[#545454] text-sm sm:text-base font-medium hover:text-[#c2282d] hover:underline-animation">About Us</a>
@@ -37,7 +42,7 @@
       </div>
     </div>
   
-    <!-- Sidebar -->
+    <!-- Sidebar for mobile (hidden by default) -->
     <div class="fixed top-0 right-0 w-64 h-full bg-white shadow-lg transform translate-x-full transition-transform duration-300 z-50" id="sidebar">
       <div class="flex justify-end p-4">
         <button class="text-2xl" id="close-sidebar">×</button>
@@ -51,6 +56,8 @@
         <a href="partner.html" class="bg-[#c2282d] text-white py-2 px-4 sm:py-2 sm:px-6 rounded hover:bg-[#a31d26]">Become Partner</a>
       </nav>
     </div>
+  
+    <!-- Overlay for mobile (hidden by default) -->
     <div class="fixed inset-0 bg-gray-500 bg-opacity-50 z-40 hidden" id="overlay"></div>
   
     <script>
@@ -138,89 +145,87 @@
             </div>
           </div>
         </div>
-  
-    <!-- Updated form with id "partner-form" -->
-    <form id="partner-form" class="w-full sm:w-[915px] mx-auto bg-white rounded-[5px] shadow p-6 sm:p-12 absolute top-[70%] left-[50%] transform -translate-x-1/2 -translate-y-1/2 mt-[200px] sm:mt-0">
-        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-          <!-- First Name -->
-          <div class="flex flex-col w-full">
-            <label for="firstname" class="text-[#292c31] text-sm sm:text-base font-normal leading-normal tracking-tight">First Name</label>
-            <input type="text" id="firstname" name="firstname" class="w-full h-10 mt-1 bg-[#f0f0f0] rounded-sm border border-[#525868] px-2" required />
+    
+        <!-- Updated form with id "partner-form" -->
+        <form id="partner-form" class="w-full sm:w-[915px] mx-auto bg-white rounded-[5px] shadow p-6 sm:p-12 absolute top-[70%] left-[50%] transform -translate-x-1/2 -translate-y-1/2 mt-[200px] sm:mt-0">
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <!-- First Name -->
+            <div class="flex flex-col w-full">
+              <label for="firstname" class="text-[#292c31] text-sm sm:text-base font-normal leading-normal tracking-tight">First Name</label>
+              <input type="text" id="firstname" name="firstname" class="w-full h-10 mt-1 bg-[#f0f0f0] rounded-sm border border-[#525868] px-2" required />
+            </div>
+      
+            <!-- Last Name -->
+            <div class="flex flex-col w-full">
+              <label for="lastname" class="text-[#292c31] text-sm sm:text-base font-normal leading-normal tracking-tight">Last Name</label>
+              <input type="text" id="lastname" name="lastname" class="w-full h-10 mt-1 bg-[#f0f0f0] rounded-sm border border-[#525868] px-2" required />
+            </div>
           </div>
-    
-          <!-- Last Name -->
-          <div class="flex flex-col w-full">
-            <label for="lastname" class="text-[#292c31] text-sm sm:text-base font-normal leading-normal tracking-tight">Last Name</label>
-            <input type="text" id="lastname" name="lastname" class="w-full h-10 mt-1 bg-[#f0f0f0] rounded-sm border border-[#525868] px-2" required />
+      
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-6">
+            <!-- Email -->
+            <div class="flex flex-col w-full">
+              <label for="email" class="text-[#292c31] text-sm sm:text-base font-normal leading-normal tracking-tight">Email</label>
+              <input type="email" id="email" name="email" class="w-full h-10 mt-1 bg-[#f0f0f0] rounded-sm border border-[#525868] px-2" required />
+            </div>
+      
+            <!-- Business Name -->
+            <div class="flex flex-col w-full">
+              <label for="businessname" class="text-[#292c31] text-sm sm:text-base font-normal leading-normal tracking-tight">Business Name</label>
+              <input type="text" id="businessname" name="businessname" class="w-full h-10 mt-1 bg-[#f0f0f0] rounded-sm border border-[#525868] px-2" required />
+            </div>
           </div>
-        </div>
-    
-        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-6">
-          <!-- Email -->
-          <div class="flex flex-col w-full">
-            <label for="email" class="text-[#292c31] text-sm sm:text-base font-normal leading-normal tracking-tight">Email</label>
-            <input type="email" id="email" name="email" class="w-full h-10 mt-1 bg-[#f0f0f0] rounded-sm border border-[#525868] px-2" required />
+      
+          <!-- Address -->
+          <div class="flex flex-col w-full mt-6">
+            <label for="address" class="text-[#292c31] text-sm sm:text-base font-normal leading-normal tracking-tight">Address</label>
+            <input type="text" id="address" name="address" class="w-full h-10 mt-1 bg-[#f0f0f0] rounded-sm border border-[#525868] px-2" required />
           </div>
-    
-          <!-- Business Name -->
-          <div class="flex flex-col w-full">
-            <label for="businessname" class="text-[#292c31] text-sm sm:text-base font-normal leading-normal tracking-tight">Business Name</label>
-            <input type="text" id="businessname" name="businessname" class="w-full h-10 mt-1 bg-[#f0f0f0] rounded-sm border border-[#525868] px-2" required />
+      
+          <!-- Submit Button -->
+          <div class="flex justify-center sm:justify-end mt-[54px]">
+            <button type="submit" class="w-full sm:w-[149px] h-10 bg-[#c2282d] rounded text-center text-white text-sm font-semibold leading-normal tracking-tight">
+              Submit
+            </button>
           </div>
-        </div>
+        </form>
     
-        <!-- Address -->
-        <div class="flex flex-col w-full mt-6">
-          <label for="address" class="text-[#292c31] text-sm sm:text-base font-normal leading-normal tracking-tight">Address</label>
-          <input type="text" id="address" name="address" class="w-full h-10 mt-1 bg-[#f0f0f0] rounded-sm border border-[#525868] px-2" required />
-        </div>
-    
-        <!-- Submit Button -->
-        <div class="flex justify-center sm:justify-end mt-[54px]">
-          <button type="submit" class="w-full sm:w-[149px] h-10 bg-[#c2282d] rounded text-center text-white text-sm font-semibold leading-normal tracking-tight">
-            Submit
-          </button>
-        </div>
-    </form>
-    
-    <script>
-      // Correctly target the form with id 'partner-form'
-      document.getElementById("partner-form").addEventListener("submit", function(e) {
-        e.preventDefault(); // Prevent the form from submitting normally
+        <script>
+          // Correctly target the form with id 'partner-form'
+          document.getElementById("partner-form").addEventListener("submit", function(e) {
+            e.preventDefault(); // Prevent the form from submitting normally
+            
+            // Create a FormData object, which will automatically collect all form data
+            var formData = new FormData(this);
         
-        // Create a FormData object, which will automatically collect all form data
-        var formData = new FormData(this);
-    
-        // Log the form data to ensure it's being captured correctly
-        formData.forEach(function(value, key) {
-          console.log(key + ": " + value);
-        });
-    
-        // Send the form data to Google Apps Script endpoint
-        fetch('https://script.google.com/macros/s/AKfycbwz4T825YbUG8CwG4fwuq8Ich0S9NX6-l6oPazsgeVTBPfTMfyAi8Fat0E8X108nHPYUQ/exec', {
-          method: 'POST',
-          body: formData
-        })
-        .then(response => response.text())
-        .then(responseText => {
-          console.log('Server Response:', responseText);
-          alert('Form submitted successfully');
-          
-          // Optionally reset the form or take any further action
-          document.getElementById("partner-form").reset(); // Reset form fields after submission (optional)
-        })
-        .catch(error => {
-          console.error('Error:', error);
-          alert('There was an error submitting the form');
-        });
-      });
-    </script>
-    
-    </body>
-    </html>
+            // Log the form data to ensure it's being captured correctly
+            formData.forEach(function(value, key) {
+              console.log(key + ": " + value);
+            });
+        
+            // Send the form data to Google Apps Script endpoint
+            fetch('https://script.google.com/macros/s/AKfycbwz4T825YbUG8CwG4fwuq8Ich0S9NX6-l6oPazsgeVTBPfTMfyAi8Fat0E8X108nHPYUQ/exec', {
+              method: 'POST',
+              body: formData
+            })
+            .then(response => response.text())
+            .then(responseText => {
+              console.log('Server Response:', responseText);
+              alert('Form submitted successfully');
+              
+              // Optionally reset the form or take any further action
+              document.getElementById("partner-form").reset(); // Reset form fields after submission (optional)
+            })
+            .catch(error => {
+              console.error('Error:', error);
+              alert('There was an error submitting the form');
+            });
+          });
+        </script>
       </div>
     </div>
   </main>
+  
   
 
 
@@ -261,80 +266,92 @@
 
 
 
-  
-  <section 
-  class="w-full h-[250px] sm:h-[387px] md:h-[387px] lg:h-[387px] relative mx-auto mt-[14px]" 
-  style="background-image: url('./image/12P.png'); background-size: cover; background-position: center;">
-  
-  <!-- Overlay Background -->
-  <div class="absolute inset-0 bg-black/70"></div>
-  
-  <!-- Content Wrapper -->
-  <div class="w-full max-w-[90%] sm:max-w-[720px] md:max-w-[900px] lg:max-w-[1080px] h-auto absolute left-1/2 transform -translate-x-1/2 top-[25%] sm:top-[25%] lg:top-[25%] text-center px-auto sm:px-6">
-    <!-- Heading -->
-    <h3 class="text-white text-[28px] sm:text-[28px] md:text-[36px] lg:text-[50px] font-regular font-['DM Serif Display'] leading-[28px] sm:leading-[36px] md:leading-[50px] lg:leading-[62px]">
-      Become A Partner
-    </h3>
 
-    <!-- Subheading -->
-    <p class="text-white text-[16px] sm:text-[18px] md:text-[20px] lg:text-[22px] font-['Jost'] font-medium leading-[20px] sm:leading-[28px] md:leading-[30px] lg:leading-[33px] tracking-tight mt-2 sm:mt-4">
-      Join the Trabo LED Lights Family
-    </p>
+  
+<section class="w-full h-[250px] sm:h-[387px] md:h-[387px] lg:h-[387px] relative mx-auto mt-[14px]" 
+style="background-image: url('./image/12P.png'); background-size: cover; background-position: center;">
 
-    <!-- CTA Button -->
-    <a href="#" 
-       class="bg-[#c2282d] text-white text-[14px] sm:text-[16px] md:text-[18px] lg:text-[18px] font-['Roboto'] font-semibold rounded-[10px] shadow mt-4 sm:mt-5 inline-block flex items-center justify-center w-[140px] sm:w-[180px] md:w-[200px] lg:w-[237px] h-[40px] sm:h-[50px] md:h-[60px] lg:h-[75px] mx-auto">
-      Contact Us
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-3 h-3 sm:w-4 sm:h-4 lg:w-5 lg:h-5 ml-2">
-        <path d="M9 5l7 7-7 7" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
-      </svg>
-    </a>
-  </div>
+<!-- Overlay Background -->
+<div class="absolute inset-0 bg-black/70"></div>
+
+<!-- Content Wrapper using grid for layout -->
+<div class="w-full max-w-[90%] sm:max-w-[720px] md:max-w-[900px] lg:max-w-[1080px] h-auto absolute left-1/2 transform -translate-x-1/2 top-[25%] sm:top-[25%] lg:top-[25%] text-center px-auto sm:px-6 grid grid-cols-1 gap-4">
+  
+  <!-- Heading -->
+  <h3 class="text-white text-[28px] sm:text-[28px] md:text-[36px] lg:text-[50px] font-regular font-['DM Serif Display'] leading-[28px] sm:leading-[36px] md:leading-[50px] lg:leading-[62px]">
+    Become A Partner
+  </h3>
+
+  <!-- Subheading -->
+  <p class="text-white text-[16px] sm:text-[18px] md:text-[20px] lg:text-[22px] font-['Jost'] font-medium leading-[20px] sm:leading-[28px] md:leading-[30px] lg:leading-[33px] tracking-tight mt-2 sm:mt-4">
+    Join the Trabo LED Lights Family
+  </p>
+
+  <!-- CTA Button -->
+  <a href="#" 
+     class="bg-[#c2282d] text-white text-[14px] sm:text-[16px] md:text-[18px] lg:text-[18px] font-['Roboto'] font-semibold rounded-[10px] shadow mt-4 sm:mt-5 inline-block flex items-center justify-center w-[140px] sm:w-[180px] md:w-[200px] lg:w-[237px] h-[40px] sm:h-[50px] md:h-[60px] lg:h-[75px] mx-auto">
+    Contact Us
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-3 h-3 sm:w-4 sm:h-4 lg:w-5 lg:h-5 ml-2">
+      <path d="M9 5l7 7-7 7" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+  </a>
+</div>
 </section>
 
+
   <!-- Footer -->
-  <footer class="background-color: #F7F7F7; py-8 mt-[20px]">
-  <div class="container mx-auto px-4 sm:px-6">
-    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-      <div>
-        <img alt="Trabo LED Lights Logo" class="h-[50px] w-auto" src="./image/Logo.png" />
-        <p class="mt-4 text-gray-600 text-sm sm:text-base">
-          It is a long established fact that a reader will be distracted looking.
-        </p>
-        <div class="flex space-x-4 mt-4">
-          <a class="text-red-600 hover:text-red-600" href="#"><i class="fab fa-facebook-f"></i></a>
-          <a class="text-red-600 hover:text-red-600" href="#"><i class="fab fa-twitter"></i></a>
-          <a class="text-red-600 hover:text-red-600" href="https://www.instagram.com/trabolights/"><i class="fab fa-instagram"></i></a>
-          <a class="text-red-600 hover:text-red-600" href="#"><i class="fab fa-linkedin-in"></i></a>
+  <footer class="bg-[#F7F7F7] py-8 mt-[20px]">
+    <div class="container mx-auto px-4 sm:px-6">
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+        
+        <!-- Logo and Social Media -->
+        <div>
+          <img alt="Trabo LED Lights Logo" class="h-[50px] w-auto" src="./image/Logo.png" />
+          <p class="mt-4 text-gray-600 text-sm sm:text-base">
+            It is a long established fact that a reader will be distracted looking.
+          </p>
+          <div class="flex space-x-4 mt-4">
+            <a class="text-red-600 hover:text-red-600" href="#"><i class="fab fa-facebook-f"></i></a>
+            <a class="text-red-600 hover:text-red-600" href="#"><i class="fab fa-twitter"></i></a>
+            <a class="text-red-600 hover:text-red-600" href="https://www.instagram.com/trabolights/"><i class="fab fa-instagram"></i></a>
+            <a class="text-red-600 hover:text-red-600" href="#"><i class="fab fa-linkedin-in"></i></a>
+          </div>
         </div>
-      </div>
-      <div>
-        <h3 class="text-lg sm:text-xl">Pages</h3>
-        <ul class="mt-2 space-y-2">
-          <li><a class="text-gray-600 hover:text-red-600 text-sm sm:text-base" href="index.html">Home</a></li>
-          <li><a class="text-gray-600 hover:text-red-600 text-sm sm:text-base" href="about.html">About us</a></li>
-        </ul>
-      </div>
-      <div>
-        <h3 class="text-lg sm:text-xl">Services</h3>
-        <ul class="mt-2 space-y-2">
-          <li><a class="text-gray-600 hover:text-red-600 text-sm sm:text-base" href="indoor.html">Indoor Lights</a></li>
-          <li><a class="text-gray-600 hover:text-red-600 text-sm sm:text-base" href="outdoor.html">Outdoor Lights</a></li>
-          <li><a class="text-gray-600 hover:text-red-600 text-sm sm:text-base" href="Decorative.html">Decorative Lights</a></li>
-          <li><a class="text-gray-600 hover:text-red-600 text-sm sm:text-base" href="">Strip Lights</a></li>
-        </ul>
-      </div>
-      <div>
-        <h3 class="text-lg sm:text-xl">Contact</h3>
-        <p class="mt-2 text-gray-600 text-sm sm:text-base">
-          Address: 2nd floor, Above HDFC Bank, Alark Shopping Mall, Lalghati Square, Bhopal (MP)
-        </p>
-        <p class="mt-2 text-gray-600 text-sm sm:text-base">Email: hellotrabo@gmail.com</p>
-        <p class="mt-2 text-gray-600 font-bold text-sm sm:text-base">Contact No:</p>
-        <p class="mt-1 text-gray-600 text-sm sm:text-base">888-999-1466, 888-999-1491, 888-999-1494</p>
+        
+        <!-- Pages Section -->
+        <div>
+          <h3 class="text-lg sm:text-xl font-medium">Pages</h3>
+          <ul class="mt-2 space-y-2">
+            <li><a class="text-gray-600 hover:text-red-600 text-sm sm:text-base" href="index.html">Home</a></li>
+            <li><a class="text-gray-600 hover:text-red-600 text-sm sm:text-base" href="about.html">About us</a></li>
+          </ul>
+        </div>
+        
+        <!-- Services Section -->
+        <div>
+          <h3 class="text-lg sm:text-xl font-medium">Services</h3>
+          <ul class="mt-2 space-y-2">
+            <li><a class="text-gray-600 hover:text-red-600 text-sm sm:text-base" href="indoor.html">Indoor Lights</a></li>
+            <li><a class="text-gray-600 hover:text-red-600 text-sm sm:text-base" href="outdoor.html">Outdoor Lights</a></li>
+            <li><a class="text-gray-600 hover:text-red-600 text-sm sm:text-base" href="Decorative.html">Decorative Lights</a></li>
+            <li><a class="text-gray-600 hover:text-red-600 text-sm sm:text-base" href="">Strip Lights</a></li>
+          </ul>
+        </div>
+        
+        <!-- Contact Section -->
+        <div>
+          <h3 class="text-lg sm:text-xl font-medium">Contact</h3>
+          <p class="mt-2 text-gray-600 text-sm sm:text-base">
+            Address: 2nd floor, Above HDFC Bank, Alark Shopping Mall, Lalghati Square, Bhopal (MP)
+          </p>
+          <p class="mt-2 text-gray-600 text-sm sm:text-base">Email: hellotrabo@gmail.com</p>
+          <p class="mt-2 text-gray-600 font-bold text-sm sm:text-base">Contact No:</p>
+          <p class="mt-1 text-gray-600 text-sm sm:text-base">888-999-1466, 888-999-1491, <br> 888-999-1494</p>
+        </div>
+        
       </div>
     </div>
-  </div>
-</footer>
+  </footer>
+  
 </body>
 </html>
