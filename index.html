@@ -494,14 +494,12 @@
     }
   </style>
 </section>
-
-
 <section class="relative w-full sm:w-[1230px] md:w-[900px] lg:w-[1230px] h-auto mb-6 sm:mb-0 mx-auto mt-[60px] sm:mt-[197px]">
 
-  <div class="grid grid-cols-1 sm:grid-cols-1 lg:grid-cols-2 gap-[200px]">
+  <div class="grid grid-cols-1 sm:grid-cols-1 lg:grid-cols-2 sm:gap-[20px] md:gap-[20px] lg:gap-[250px] gap-[20px]">
 
     <!-- First div (About Trabo) -->
-    <div class="relative w-full sm:w-[705px] md:w-[705px] lg:w-[705px] h-[400px] sm:h-[677px] rounded-lg flex justify-start items-center"
+    <div class="relative w-full sm:w-[705px] md:w-[705px] lg:w-[705px] h-[400px] sm:h-[677px] rounded-lg flex justify-start items-center animate-in hover:zoom"
       style="background-image: url('./image/d1.png'); background-size: cover; background-position: center;">
 
       <!-- Solid Background Overlay -->
@@ -522,7 +520,7 @@
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-1 gap-[20px] md:gap-[47px] sm:gap-[20px] w-full sm:w-auto">
 
       <!-- Unbeatable Quality -->
-      <div class="relative w-full sm:w-[495px] h-[250px] sm:h-[314px] bg-[#79ccc4] rounded-lg flex items-center justify-center">
+      <div class="relative w-full sm:w-[495px] h-[250px] sm:h-[314px] bg-[#79ccc4] rounded-lg flex items-center justify-center animate-in hover:zoom">
         <img class="absolute w-[150px] sm:w-[250px] h-auto sm:h-[270px] left-0 top-0" src="./image/Alpha Cylinder 1.png" />
         <h2 class="absolute left-[100px] sm:left-[160px] top-[50px] sm:top-[71px] text-[#232323] text-[26px] sm:text-[32px] font-semibold font-['Roboto'] leading-[28px] sm:leading-[48px]">
           Unbeatable quality
@@ -533,7 +531,7 @@
       </div>
 
       <!-- Leading the Way -->
-      <div class="relative w-full sm:w-[495px] h-[250px] sm:h-[314px] bg-[#ffc857] rounded-lg flex justify-start items-center">
+      <div class="relative w-full sm:w-[495px] h-[250px] sm:h-[314px] bg-[#ffc857] rounded-lg flex justify-start items-center animate-in hover:zoom">
         <img class="absolute w-[80px] sm:w-[150px] h-auto left-0 top-0" src="./image/Omega 1.png" />
         <img class="absolute w-[100px] sm:w-[200px] h-auto right-0 bottom-0" src="./image/Rimlesss 1.png" />
         <div class="absolute left-4 top-[60px] sm:left-8 sm:top-[91px] w-[80%] sm:w-[276px]">
@@ -551,6 +549,55 @@
   </div>
 
 </section>
+
+<style>
+  /* Initial State */
+  .animate-in {
+    opacity: 0;
+    transform: translateY(50px) scale(0.9);
+    transition: all 0.8s cubic-bezier(0.25, 1, 0.5, 1);
+  }
+
+  /* When Visible */
+  .animate-in.show {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+
+  /* Hover Zoom */
+  .hover\:zoom {
+    transition: transform 0.5s ease, box-shadow 0.3s ease;
+  }
+
+  .hover\:zoom:hover {
+    transform: scale(1.05); /* Slight zoom */
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2); /* Add a subtle shadow for depth */
+  }
+</style>
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const elements = document.querySelectorAll(".animate-in");
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("show");
+          } else {
+            entry.target.classList.remove("show");
+          }
+        });
+      },
+      {
+        threshold: 0.1, // Trigger when 10% is visible
+      }
+    );
+
+    elements.forEach((el) => observer.observe(el));
+  });
+</script>
+
 
 
 
