@@ -129,102 +129,110 @@
   
   
   
-  <main class="container mx-auto mt-[62px] px-6">
-    <!-- Become a Partner Section -->
-    <div class="flex items-center justify-center min-h-[50vh]">
-      <div class="w-full sm:w-[1226px] h-auto sm:h-[734px] relative">
-        <!-- Background Image Section -->
-        <div class="relative w-full h-[441px] bg-cover bg-center rounded-xl" style="background-image: url('./image/11P.png');">
-          <div class="absolute inset-0 bg-[#0e0303]/70 rounded-xl"></div>
-          <div class="absolute left-4 sm:left-[11%] top-[10%] w-[90%] sm:w-[518px] text-left px-4">
-            <h1 class="text-[#ff5656] text-3xl sm:text-4xl md:text-4xl font-normal font-['DM Serif Display'] leading-[45px] mb-2">
-              Become a Partner
-            </h1>
-            <div class="text-[#fffbfc] text-lg sm:text-xl font-normal font-['Roboto'] leading-[25px] tracking-tight">
-              Get dedicated support from our expert team to grow your business, including marketing materials, training, and technical assistance.
-            </div>
+<!-- Main Container -->
+<main class="container mx-auto mt-[62px] px-6">
+  <!-- Become a Partner Section -->
+  <div class="flex items-center justify-center min-h-[50vh]">
+    <div class="w-full sm:w-[1226px] h-auto sm:h-[734px] relative">
+      <!-- Background Image Section -->
+      <div class="relative w-full h-[441px] bg-cover bg-center rounded-xl" style="background-image: url('./image/11P.png');">
+        <div class="absolute inset-0 bg-[#0e0303]/70 rounded-xl"></div>
+        <div class="absolute left-4 sm:left-[11%] top-[10%] w-[90%] sm:w-[518px] text-left px-4">
+          <h1 class="text-[#ff5656] text-3xl sm:text-4xl md:text-4xl font-normal font-['DM Serif Display'] leading-[45px] mb-2">
+            Become a Partner
+          </h1>
+          <div class="text-[#fffbfc] text-lg sm:text-xl font-normal font-['Roboto'] leading-[25px] tracking-tight">
+            Get dedicated support from our expert team to grow your business, including marketing materials, training, and technical assistance.
           </div>
         </div>
-    
-        <!-- Updated form with id "partner-form" -->
-        <form id="partner-form" class="w-full sm:w-[915px] mx-auto bg-white rounded-[5px] shadow p-6 sm:p-12 absolute top-[70%] left-[50%] transform -translate-x-1/2 -translate-y-1/2 mt-[200px] sm:mt-0">
-          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-            <!-- First Name -->
-            <div class="flex flex-col w-full">
-              <label for="firstname" class="text-[#292c31] text-sm sm:text-base font-normal leading-normal tracking-tight">First Name</label>
-              <input type="text" id="firstname" name="firstname" class="w-full h-10 mt-1 bg-[#f0f0f0] rounded-sm border border-[#525868] px-2" required />
-            </div>
-      
-            <!-- Last Name -->
-            <div class="flex flex-col w-full">
-              <label for="lastname" class="text-[#292c31] text-sm sm:text-base font-normal leading-normal tracking-tight">Last Name</label>
-              <input type="text" id="lastname" name="lastname" class="w-full h-10 mt-1 bg-[#f0f0f0] rounded-sm border border-[#525868] px-2" required />
-            </div>
+      </div>
+
+      <!-- Form Section -->
+      <form id="partner-form" class="w-full sm:w-[915px] mx-auto bg-white rounded-[5px] shadow p-6 sm:p-12 absolute top-[70%] left-[50%] transform -translate-x-1/2 -translate-y-1/2 mt-[200px] sm:mt-0">
+        <!-- Input Fields -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <!-- First Name -->
+          <div class="flex flex-col w-full">
+            <label for="firstname" class="text-[#292c31] text-sm sm:text-base font-normal leading-normal tracking-tight">First Name</label>
+            <input type="text" id="firstname" name="firstname" class="w-full h-10 mt-1 bg-[#f0f0f0] rounded-sm border border-[#525868] px-2" required />
           </div>
-      
-          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-6">
-            <!-- Email -->
-            <div class="flex flex-col w-full">
-              <label for="email" class="text-[#292c31] text-sm sm:text-base font-normal leading-normal tracking-tight">Email</label>
-              <input type="email" id="email" name="email" class="w-full h-10 mt-1 bg-[#f0f0f0] rounded-sm border border-[#525868] px-2" required />
-            </div>
-      
-            <!-- Business Name -->
-            <div class="flex flex-col w-full">
-              <label for="businessname" class="text-[#292c31] text-sm sm:text-base font-normal leading-normal tracking-tight">Business Name</label>
-              <input type="text" id="businessname" name="businessname" class="w-full h-10 mt-1 bg-[#f0f0f0] rounded-sm border border-[#525868] px-2" required />
-            </div>
+          <!-- Last Name -->
+          <div class="flex flex-col w-full">
+            <label for="lastname" class="text-[#292c31] text-sm sm:text-base font-normal leading-normal tracking-tight">Last Name</label>
+            <input type="text" id="lastname" name="lastname" class="w-full h-10 mt-1 bg-[#f0f0f0] rounded-sm border border-[#525868] px-2" required />
           </div>
-      
-          <!-- Address -->
-          <div class="flex flex-col w-full mt-6">
-            <label for="address" class="text-[#292c31] text-sm sm:text-base font-normal leading-normal tracking-tight">Address</label>
-            <input type="text" id="address" name="address" class="w-full h-10 mt-1 bg-[#f0f0f0] rounded-sm border border-[#525868] px-2" required />
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-6">
+          <!-- Email -->
+          <div class="flex flex-col w-full">
+            <label for="email" class="text-[#292c31] text-sm sm:text-base font-normal leading-normal tracking-tight">Email</label>
+            <input type="email" id="email" name="email" class="w-full h-10 mt-1 bg-[#f0f0f0] rounded-sm border border-[#525868] px-2" required />
           </div>
-      
-          <!-- Submit Button -->
-          <div class="flex justify-center sm:justify-end mt-[54px]">
-            <button type="submit" class="w-full sm:w-[149px] h-10 bg-[#c2282d] rounded text-center text-white text-sm font-semibold leading-normal tracking-tight">
-              Submit
-            </button>
+          <!-- Business Name -->
+          <div class="flex flex-col w-full">
+            <label for="businessname" class="text-[#292c31] text-sm sm:text-base font-normal leading-normal tracking-tight">Business Name</label>
+            <input type="text" id="businessname" name="businessname" class="w-full h-10 mt-1 bg-[#f0f0f0] rounded-sm border border-[#525868] px-2" required />
           </div>
-        </form>
-    
-        <script>
-          // Correctly target the form with id 'partner-form'
-          document.getElementById("partner-form").addEventListener("submit", function(e) {
-            e.preventDefault(); // Prevent the form from submitting normally
-            
-            // Create a FormData object, which will automatically collect all form data
-            var formData = new FormData(this);
-        
-            // Log the form data to ensure it's being captured correctly
-            formData.forEach(function(value, key) {
-              console.log(key + ": " + value);
-            });
-        
-            // Send the form data to Google Apps Script endpoint
-            fetch('https://script.google.com/macros/s/AKfycbwz4T825YbUG8CwG4fwuq8Ich0S9NX6-l6oPazsgeVTBPfTMfyAi8Fat0E8X108nHPYUQ/exec', {
-              method: 'POST',
-              body: formData
-            })
+        </div>
+
+        <!-- Address -->
+        <div class="flex flex-col w-full mt-6">
+          <label for="address" class="text-[#292c31] text-sm sm:text-base font-normal leading-normal tracking-tight">Address</label>
+          <input type="text" id="address" name="address" class="w-full h-10 mt-1 bg-[#f0f0f0] rounded-sm border border-[#525868] px-2" required />
+        </div>
+
+        <!-- Submit Button -->
+        <div class="flex justify-center sm:justify-end mt-[54px]">
+          <button type="submit" class="w-full sm:w-[149px] h-10 bg-[#c2282d] rounded text-center text-white text-sm font-semibold leading-normal tracking-tight">
+            Submit
+          </button>
+        </div>
+      </form>
+
+      <!-- Success Pop-Up -->
+      <div id="success-popup" class="fixed inset-0 flex items-center justify-center bg-black/70 hidden">
+        <div class="bg-white rounded-lg p-6 shadow-lg text-center w-96">
+          <h2 class="text-xl font-semibold text-[#292c31] mb-4">Form Submitted!</h2>
+          <p class="text-[#525868] text-sm">Thank you for submitting the form. We'll get back to you soon.</p>
+          <button id="close-popup" class="mt-4 bg-[#c2282d] text-white px-4 py-2 rounded">
+            Close
+          </button>
+        </div>
+      </div>
+
+      <script>
+        document.getElementById("partner-form").addEventListener("submit", function(e) {
+          e.preventDefault(); // Prevent the form from submitting normally
+
+          var formData = new FormData(this);
+
+          fetch('https://script.google.com/macros/s/AKfycbwz4T825YbUG8CwG4fwuq8Ich0S9NX6-l6oPazsgeVTBPfTMfyAi8Fat0E8X108nHPYUQ/exec', {
+            method: 'POST',
+            body: formData
+          })
             .then(response => response.text())
             .then(responseText => {
               console.log('Server Response:', responseText);
-              alert('Form submitted successfully');
-              
-              // Optionally reset the form or take any further action
-              document.getElementById("partner-form").reset(); // Reset form fields after submission (optional)
+              document.getElementById("partner-form").reset(); // Reset form
+              const popup = document.getElementById("success-popup");
+              popup.classList.remove("hidden"); // Show success pop-up
             })
             .catch(error => {
               console.error('Error:', error);
               alert('There was an error submitting the form');
             });
-          });
-        </script>
-      </div>
+        });
+
+        document.getElementById("close-popup").addEventListener("click", function() {
+          const popup = document.getElementById("success-popup");
+          popup.classList.add("hidden"); // Hide success pop-up
+        });
+      </script>
     </div>
-  </main>
+  </div>
+</main>
+
   
   
 
